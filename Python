@@ -1,0 +1,32 @@
+# Write a program that will implement the function f(n)
+# where f(n) = (n^2 -7) when n<9 and f(n-10) when n>=10
+
+#To access numpy library
+#To import matplotlib.pyplot library
+import matplotlib.pyplot as plt
+import numpy as np
+
+n = np.arange(0,100,1)
+f1 = []
+
+def mp1():
+# Setting the condition when n<9 and n>=10
+    for n in range(0,10):
+        for n in range(0,10):
+            if n <= 9:
+                f = n*n - 7
+                f1.append(f)
+            else:
+                x = n-10
+                y = x*x - 7
+                f1.append(y)
+        continue
+
+print (mp1())
+#For the Graphing of the function f(n) = (n^2 - 7)
+plt.ylabel('y-axis')
+plt.xlabel('x-axis')
+plt.title('Machine Problem 1')
+plt.stem(n,f1, linefmt = 'r-.', label = 'xy')
+plt.legend(loc = 'upper right')
+plt.show 
