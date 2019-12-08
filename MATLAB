@@ -1,0 +1,15 @@
+n = [0:1:99];
+functionOfEn = [];
+for eX = 0:99
+    while eX >= 10
+        eX = eX - 10;
+    end
+    if eX <= 9 
+        pangkshon = eX^2-7;
+    end
+    functionOfEn(end+1) = pangkshon;
+end
+stem(n,functionOfEn);
+title('Machine Problem 1')
+xlabel('n')
+ylabel('f(n)')
